@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +16,18 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css"/>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
+    <style>
+	
+		.navbar {
+			top: -25px;
+		}
+	
+	</style>
+
 </head>
 <body>
     
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header navbar">
                 <header class="mdl-layout__header">
                   <div class="mdl-layout__header-row">
                     <!-- Title -->
@@ -27,7 +39,7 @@
                       <a class="mdl-navigation__link" href="">Link</a>
                       <a class="mdl-navigation__link" href="">Link</a>
                       <a class="mdl-navigation__link" href="login.php">Login</a>
-                      <a class="mdl-navigation__link" href="signUp.php">Subscribe</a>
+                      <a class="mdl-navigation__link" href="signup.php">Subscribe</a>
                     </nav>
                   </div>
                 </header>

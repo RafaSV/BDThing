@@ -54,26 +54,26 @@
         </div>
         <div class="mdl-card__supporting-text">
         
-            <form action="#" class="form">
+            <form role="form" action="login.inc.php" method="POST" class="form">
 
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="sample3">
+                    <input name="email" class="mdl-textfield__input" type="text" id="sample3">
                     <label class="mdl-textfield__label" for="sample3">Email</label>
                 </div>
 
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="password" id="sample3">
+                    <input name="pwd" class="mdl-textfield__input" type="password" id="sample3">
                     <label class="mdl-textfield__label" for="sample3">Password</label>
+                </div>
+
+                <div class="mdl-card__actions">
+                    <button type="submit" name="submit" class="mdl-button mdl-js-button mdl-button--primary button">
+                        Login
+                    </button>
                 </div>
 
             </form>
 
-        </div>
-
-        <div class="mdl-card__actions">
-            <button class="mdl-button mdl-js-button mdl-button--primary button">
-                Login
-            </button>
         </div>
 
     </div>
