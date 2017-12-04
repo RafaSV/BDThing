@@ -16,14 +16,14 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
+    <!-- head minhocão 
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.dom.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <script language="javascript" type="text/javascript" src="snake.js"></script> -->
+
 </head>
 <body>
-    
-        <h1>DB Thing</h1>
-        <p>My first paragraph.</p>
-        
-
-        <script src="app.js"></script>
 
 </body>
 </html>
