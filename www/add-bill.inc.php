@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
 	else {
         $sql = "INSERT INTO bills (tag, description, price) VALUES ('$tag', '$description', '$price');";
         mysqli_query($conn, $sql);
-        header("Location: index.php?submit-bill=success");
+        header("Location: expenses.php?submit-bill=success");
         exit();
 	}
 	

@@ -72,7 +72,7 @@
 
                 <div class="mdl-card__actions">
                     <button type="submit" name="submit" class="mdl-button mdl-js-button mdl-button--primary button">
-                        Login
+                        Add
                     </button>
                 </div>
 
