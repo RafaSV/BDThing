@@ -3,10 +3,12 @@ include 'dbh.inc.php';
 $output = '';
 
 if(isset($_GET['keywords'])) {
-    $keywords = $_GET['keywords'];
+    $keywords = mysqli_real_escape_string($conn, $_GET['keywords']);
     $searchQ = preg_replace("#[^0-9a-z]#i", "", $searchQ);
 
-    $query = mysql_query("SELECT * FROM bills WHERE tag LIKE '%$searchQ% OR description LIKE '%$searchQ%'") or die("You're unlucky!");
+    $query = $conn->query("
+        SELECT
+    ");
     $count = mysqli_num_rows($query);
     if($count == 0) {
         $output =  'No such results!';

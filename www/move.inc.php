@@ -21,9 +21,8 @@ else if(isset($_GET['delete'])) {
         if ($conn->query($sql) === TRUE) {
             header("Location: index.php?update-bill=success");
         } else {
-            echo "Erro removendo usuário: " . $conn->error;
+            echo "Couldn't remove user: " . $conn->error;
         }
-        echo "<a href='listar.php'>Listar Usuários</a>";
         $conn->close();
         
     }

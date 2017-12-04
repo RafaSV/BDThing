@@ -41,7 +41,6 @@ session_start();
 							echo '<form role="form" action="logout.inc.php" method="POST">
 							<nav class="mdl-navigation mdl-layout--large-screen-only">
 							<a class="mdl-navigation__link" href="expenses.php">Bills</a>
-							<a class="mdl-navigation__link" href="search.php">Search</a>
 							<a class="mdl-navigation__link" href="user-profile.php">My Profile</a>
 							<a class="mdl-navigation__link" href="">
 							<button type="submit" name="logout" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">

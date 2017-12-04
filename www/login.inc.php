@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
 					$_SESSION['u_lastN'] = $row['lName'];
 					$_SESSION['u_email'] = $row['email'];
 					$_SESSION['u_uid'] = $row['uid'];
-					header("Location: index.php");
+					header("Location: expenses.php");
 					exit();
 				}
 			}
