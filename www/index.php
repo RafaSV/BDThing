@@ -1,5 +1,6 @@
 <?php
-	include_once 'header.php';
+    include_once 'header.php';
+    include 'dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +43,7 @@
         }
 
         .demo-card-square.mdl-card {
-            width: 500px;
+            width: 700px;
             height: 100px;
             margin-top: 5%;
             margin-left: 10%;
@@ -58,8 +59,14 @@
         }
 
         button.add {
-            top: -12%;
+            top: -6%;
             left: 12.5%;
+        }
+
+        .priceTag {
+            float: right;
+            margin-top: -20px;
+            margin-bottom: -25px;
         }
 
     </style>
@@ -73,7 +80,7 @@
             <div class="fBlock"></div>
 
             <div class="mdl-grid grid">
-                <div class="mdl-cell mdl-cell--3-col">3
+                <div class="mdl-cell mdl-cell--2-col">3
                 
                     <a href="add-bill.php">
                         <button class="add mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
@@ -82,23 +89,43 @@
                     </a>
                 
                 </div>
-                <div class="mdl-cell mdl-cell--6-col centerCell">
+                <div class="mdl-cell mdl-cell--8-col centerCell">
 
-                <div class="demo-card-square mdl-card mdl-shadow--2dp">
-                    <div class="mdl-card__title mdl-card--expand">
-                        <h2 class="mdl-card__title-text">Bill 1</h2>
-                    </div>
-                    <div id="downArrow" class="mdl-card__supporting-text">
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <button onclick="expandCard" class="mdl-button mdl-js-button mdl-button--icon">
-                            <i class="material-icons">keyboard_arrow_down</i>
-                        </button>
-                    </div>
-                </div>
+                <?php
+                    
+                    $query = "SELECT * FROM bills ";
+                    $result = $conn->query($query);
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+
+                            echo "
+                                <div class='demo-card-square mdl-card mdl-shadow--2dp'>
+                                    <div class='mdl-card__title mdl-card--expand'>
+                                        <h2 class='mdl-card__title-text'> ".$row["tag"]." </h2>
+                                    </div>
+                                    <div id='downArrow' class='mdl-card__supporting-text'> <p>".$row["description"]."</p>
+                                    </div>
+                                    <div class='mdl-card__actions mdl-card--border'>
+                                        <button onclick='expandCard' class='mdl-button mdl-js-button mdl-button--icon'>
+                                            <i class='material-icons'>more_horizontal</i>
+                                        </button>
+                                        <div class='priceTag'><h3> $".$row["price"]." </h3></div>
+                                    </div>
+                                </div>
+                            ";
+                        }
+                    }
+
+                    else {
+                        echo"Congrats! You have no debts!";
+                    }
+                                            
+                    $conn->close();
+                ?>
 
                 </div>
-                <div class="mdl-cell mdl-cell--3-col">3</div>
+                <div class="mdl-cell mdl-cell--2-col">3</div>
             </div>
 
         </div>
