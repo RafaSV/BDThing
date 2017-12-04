@@ -42,7 +42,6 @@ if (isset($_POST['submit'])) {
 					$hashedPassword = password_hash($pwd, PASSWORD_BCRYPT);
 					// Inserir usuário no BD
 					$sql = "INSERT INTO users (fName, lName, uid, email, pwd) VALUES ('$fName', '$lName', '$uid', '$email', '$hashedPassword');";
-					echo "consegui porra!";
 					mysqli_query($conn, $sql);
 					header("Location: index.php?signup=success");
 					exit();
