@@ -12,18 +12,95 @@
 
     <!-- Setting MDL on -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css"/>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-    <!-- head minhocão 
-    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
-  <script language="javascript" type="text/javascript" src="libraries/p5.dom.js"></script>
-  <script language="javascript" type="text/javascript" src="sketch.js"></script>
-  <script language="javascript" type="text/javascript" src="snake.js"></script> -->
+    <script>
+    
+        function expandCard() {
+
+        }
+
+    </script>
+
+    <style>
+    
+        .fBlock {
+            position: absolute;
+            background-color: #00796b;
+            height: 40%;
+            width: 100%;
+        }
+
+        .grid {
+            position: relative;
+            top: 229px;
+        }
+
+        .centerCell {
+            background-color: #e0e0e0;
+        }
+
+        .demo-card-square.mdl-card {
+            width: 500px;
+            height: 100px;
+            margin-top: 5%;
+            margin-left: 10%;
+        }
+        .demo-card-square > .mdl-card__title {
+            color: #fff;
+            background:
+            url('../assets/demos/dog.png') bottom right 15% no-repeat #00e676;
+        }
+
+        .demo-card-square {
+            document.getElementById("downArrow");
+        }
+
+        button.add {
+            top: -12%;
+            left: 12.5%;
+        }
+
+    </style>
 
 </head>
 <body>
 
+    <main class="mdl-layout__content">
+        <div class="page-content">
+
+            <div class="fBlock"></div>
+
+            <div class="mdl-grid grid">
+                <div class="mdl-cell mdl-cell--3-col">3
+                
+                    <button class="add mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                        <i class="material-icons">add</i>
+                    </button>
+                
+                </div>
+                <div class="mdl-cell mdl-cell--6-col centerCell">
+
+                <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Bill 1</h2>
+                    </div>
+                    <div id="downArrow" class="mdl-card__supporting-text">
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <button onclick="expandCard" class="mdl-button mdl-js-button mdl-button--icon">
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </button>
+                    </div>
+                </div>
+
+                </div>
+                <div class="mdl-cell mdl-cell--3-col">3</div>
+            </div>
+
+        </div>
+    </main>
+    
 </body>
 </html>

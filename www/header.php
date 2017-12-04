@@ -15,6 +15,14 @@ session_start();
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css"/>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
+	<style>
+	
+		div.mdl-layout__header-row {
+			background-color: #004c40;
+		}
+
+	</style>
+
 </head>
 <body>
     
@@ -57,10 +65,7 @@ session_start();
                   </div>
                 </header>
                 
-                <main class="mdl-layout__content">
-                  <div class="page-content"></div>
-                </main>
-              </div>
+                
 
 </body>
 </html>
